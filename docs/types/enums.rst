@@ -24,6 +24,13 @@ But also using instances of Enum:
 
     Episode = graphene.Enum('Episode', [('NEWHOPE', 4), ('EMPIRE', 5), ('JEDI', 6)])
 
+In both cases ``Episode`` will be a class that needs to be instantiated when used in an input:
+
+.. code:: python
+
+    class MyInput(graphene.InputObjectType):
+        episode = Episode()
+
 Value descriptions
 ------------------
 
